@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 import pygame
 
@@ -19,6 +21,7 @@ def run_game():
 	# Start the main loop for the game.
 	while True:
 		gf.check_events(ship)
+		ship.update()
 		gf.update_screen(ai_settings, screen, ship)
 
 
