@@ -96,6 +96,14 @@ def create_fleet(ai_settings, screen, ship, aliens):
 		for alien_number in range(number_aliens_x):
 			create_alien(ai_settings, screen, aliens, alien_number, row_number)
 
+def check_fleet_edges(ai_settings, aliens):
+	"""Respond appropriately if any aliens have reached on edge."""
+	for alien in aliens.sprites():
+		if alien.check_edges():
+			change_fleet_direction(ai_settings, aliens)
+			break
+# 278
+
 def update_aliens(aliens):
 	"""Update the positions of all aliens in the fleet."""
 	aliens.update()
