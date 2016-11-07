@@ -19,3 +19,6 @@ class Settings():
 
 		# Alien settings
 		self.alien_speed_factor = 1
+		self.fleet_drop_speed = 10
+		# fleet direction of 1 represents right; -1 represents letf.
+		self.fleet_direction = 1
